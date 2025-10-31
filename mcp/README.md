@@ -23,6 +23,7 @@ Before you begin, ensure you have the following installed on your system:
 * Activate the Environment:
     After the environment is created, activate it with this command:
     ```
+    eval "$(/opt/conda/bin/conda shell.bash hook)" #for codespaces
     conda activate mcp-env
     ```
 * Set Your Google API Key:
