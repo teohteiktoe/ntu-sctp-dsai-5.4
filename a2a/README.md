@@ -23,6 +23,7 @@ Before you begin, ensure you have the following installed on your system:
     After the environment is created, activate it with this command:
 
     ```
+    eval "$(/opt/conda/bin/conda shell.bash hook)" #for codespaces
     conda activate a2a-env
     ```
 
