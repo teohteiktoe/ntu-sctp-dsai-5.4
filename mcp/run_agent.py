@@ -4,6 +4,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 
+#os.environ["GOOGLE_API_KEY"] = "AIzaSyANexXf85IyyaPmFLtKmndYnvlSM48_NXI"
 os.environ["GOOGLE_API_KEY"] = os.environ.get("GOOGLE_API_KEY")
 
 
@@ -21,7 +22,7 @@ async def main():
     if not tools:
         raise RuntimeError("Failed to connect to MCP server")
 
-    model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+    model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
     agent = create_react_agent(model, tools)
 
     resp1 = await agent.ainvoke({"messages": "Reverse the string 'hello world'"})
